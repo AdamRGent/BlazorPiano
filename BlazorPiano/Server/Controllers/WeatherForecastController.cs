@@ -1,4 +1,3 @@
-using BlazorPiano.Shared;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlazorPiano.Server.Controllers

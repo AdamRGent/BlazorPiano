@@ -1,6 +1,6 @@
 global using BlazorPiano.Shared;
 global using Microsoft.EntityFrameworkCore;
-using BlazorPiano.Server.Data;
+global using BlazorPiano.Server.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);

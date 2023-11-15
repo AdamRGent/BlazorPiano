@@ -1,0 +1,35 @@
+﻿@inject IDetailsServices DetailsServices
+
+<ul class="list-unstyled">
+    @foreach (var detail in DetailsServices.Details)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="#">
+                    <img class="media-img" src="@detail.ImageUrl" alt="@detail.Name" />
+                </a>
+            </div>
+            <div class="media-body">
+                <br>
+                <h3>@detail.Name</h3>
+                <br>
+                <h5>About Me</h5>
+                <br>
+                <p>@detail.Description</p>
+                <br>
+                <h5>Lesson Details</h5>
+                <br>
+                <p>@detail.LessonDetails</p>
+            </div>
+        </li>
+    }
+</ul>
+
+
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await DetailsServices.GetDetails();
+    }
+}

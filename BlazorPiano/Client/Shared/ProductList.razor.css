@@ -2,7 +2,7 @@
     max-height: 200px;
     max-width: 200px;
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     transition: transform .2s;
 }
 
@@ -10,14 +10,15 @@
     transform: scale(1.1);
 }
 
-.media{
+
+.media {
     display: flex;
     align-items: flex-start;
 }
 
 .media-body {
     flex: 1;
-    margin-right: 20px;
+    margin-left: 40px;
 }
 .media-img-wrapper {
     width: 200px;

@@ -1,7 +1,8 @@
 global using BlazorPiano.Shared;
 global using Microsoft.EntityFrameworkCore;
 global using BlazorPiano.Server.Data;
-
+global using BlazorPiano.Server.Services.ProductServices;
+global using BlazorPiano.Server.Services.DetailsServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IDetailsServices, DetailsServices>();
 var app = builder.Build();
 app.UseSwaggerUI();
 
